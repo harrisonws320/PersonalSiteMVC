@@ -1,0 +1,68 @@
+﻿@section Styles{
+    <link href="~/assets/css/portfolio.css" rel="stylesheet" />
+}
+
+<main id="main">
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p></p>
+            </div>
+
+            <div class="container my-4">
+                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <div class="carousel-inner" style="max-height: 100vh; position: relative;">
+
+                        <div class="carousel-item active">
+                            <div class="image-container" style="position: relative;">
+                                <img src="~/assets/img/berserkEnterTheVoid.jpg" class="d-block w-100" alt="DungeonApp" />
+                                <div class="text-over-image text-over-image-1">
+                                    <p class="image-text">My C# Dungeon Application: <em>Enter The Void</em></p>
+                                    <a href="http://github.com/harrisonws320/FinalDungeon" class="image-link" target="blank">Click To Enter</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="image-container" style="position: relative;">
+                                <img src="~/assets/img/bookzpt2.JPG" class="d-block w-100" alt="Storefront" />
+                                <div class="text-over-image text-over-image-2">
+                                    <p class="image-text">My MVC Storefront: <em>Used Books</em></p>
+                                    <a href="http://github.com/harrisonws320" class="image-link" target="_blank">Click To Peruse</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="image-container" style="position: relative;">
+                                <img src="~/assets/img/FD2.jpg" class="d-block w-100" alt="MAThesis" />
+                                <div class="text-over-image text-over-image-3">
+                                    <p class="image-text">My M.A. Thesis: <em>Dostoevsky's Mortal Christ</em></p>
+                                    <a href="~/assets/PDFs/Dostoevsky's Mortal Christ.pdf" class="image-link" target="_blank">Click To Read</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <!-- Instead of the default arrow for a bootstrap carousel, we will add in custom arrows using Bootstrap Icons.
+                            These arrows will be more visible. We add the class fs-1 to make the font size larger using Bootstrap. -->
+                            <i class="bi bi-arrow-left-circle-fill fs-1"></i>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <i class="bi bi-arrow-right-circle-fill fs-1"></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>
+<!-- End #main -->

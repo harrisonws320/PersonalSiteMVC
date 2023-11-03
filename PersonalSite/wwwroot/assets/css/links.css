@@ -1,0 +1,311 @@
+
+body 
+  {
+    width: 100%;
+    height: 100vh;
+    background-color: #a34286; /* #942974 */ 
+    
+  }
+
+ 
+
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lora", serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #888888;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar>ul>li>a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #eea633;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar a:hover:before,
+.navbar li:hover>a:before,
+.navbar .active:before {
+  visibility: visible;
+  width: 25px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #000000;
+}
+
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+  border-radius: 4px;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+  padding: 0;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+  color: #eea633;
+}
+
+.navbar .dropdown:hover>ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+
+  .navbar .dropdown .dropdown:hover>ul {
+    left: -100%;
+  }
+}
+
+.btn-links {
+    font-family: "Georgia", sans-serif;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin-top: 30px;
+    color: #fff;
+    background: #63124b;
+  }
+  .btn-links:hover {
+    background: #d259ae;
+  }
+  
+  
+  
+  .links a {
+    color: #8a0462;
+    padding-left: 10px;
+    display: inline-block;
+    align-items: center;
+    line-height: 0px;
+    transition: 0.3s;
+    font-size: 33px;
+  }
+  
+  .links a:hover {
+    color: #d259ae;
+  }
+
+/* #region Class Cards */
+
+.links h3 {
+  font-family: "Lora";
+  font-size: 31px;
+
+}
+
+.card-container {
+  display: inline-block;
+  width: 23.5%;
+  margin: 2% 4.75%;
+}
+
+.card {
+  margin: 10px; 
+  background-color: #f1d3a4;
+  border: 10px solid #E5977D;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+  /* box-shadow applies a shadow to the element.
+  Syntax is box-shadow: [horizontal-offset] [vertical-offset] [blur] and then the [color] */
+  width: 300px;
+  overflow: hidden;
+  height: 650px;
+}
+
+.card-header img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  /* OBJECT-FIT Notes:
+This defines how the image is manipulated to fill is container. Possible values:
+- fill: default, image is resized to given dimension. Will be stretched or compressed as needed.
+- contain: keep aspect ratio, but resized so that the entire image fits within given dimensions
+- cover: keep aspect ratio and fill given dimensions. Image will be clipped if needed to fit area.
+- none: the image is not resized
+- scale-down: image is scaled down to the smallest version of none or contain
+*/
+}
+.card-body {
+  padding: 20px;
+  min-height: 250px;
+  color: #000;
+}
+.card-body h4, .tag {
+  font-family: "Lora";
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.card-body p {
+  font-size: 12em;
+  margin: 0 0 40px;
+  /* Here's the order for margin values: Top Right/Left Bottom */
+  text-align: justify;
+}
+.tag {
+  border-radius: 50px;
+  font-size: .9em;
+  margin: 0;
+  color: #022736;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.header-social-links a {
+  color: #eea633;
+}
+
+.header-social-links a:hover {
+  color:#ebb35a;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #eea633;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.links .navbar-mobile a:hover,
+.links .navbar-mobile .active,
+.links .navbar-mobile li:hover>a {
+  color:#ebb35a;
+}
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #eea633;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background:#ebb35a;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-border {
+  border: 3px solid #f8efc8; /* Replace #ff0000 with the desired color code */
+}
+
