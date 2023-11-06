@@ -402,3 +402,6 @@ FodyWeavers.xsd
 
 # ditch the archive
 /GadgetStore.UI.MVC/_Archive/
+
+# Protecting Sensitive Info
+/PersonalSite/appsettings.json
